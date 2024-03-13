@@ -25,10 +25,16 @@ def unmute_audio():
 def poll_network_and_set_audio():
     global current_ssid
 
-    muted_networks = [
+    mute_networks = [
         "eduroam",
         "MUW-NET",
         "OnePluz 6",
+        "OEBB",
+    ]
+
+    unmute_networks = [
+        "Magenta-613932",
+        "A1-8AFBB5",
     ]
 
     ssid = get_wlan0_network_ssid()
@@ -41,9 +47,9 @@ def poll_network_and_set_audio():
 
     current_ssid = ssid
 
-    if ssid in muted_networks:
+    if ssid in mute_networks:
         mute_audio()
-    else:
+    elif ssid in unmute_networks:
         unmute_audio()
 
 
