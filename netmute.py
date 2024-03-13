@@ -33,13 +33,13 @@ def poll_network_and_set_audio():
 
     ssid = get_wlan0_network_ssid()
 
+    if not ssid:
+        return  # we don't change anything.
+
     if current_ssid == ssid:
         return  # We don't wanna set it over and over again.
 
     current_ssid = ssid
-
-    if not ssid:
-        return  # we don't change anything.
 
     if ssid in muted_networks:
         mute_audio()
