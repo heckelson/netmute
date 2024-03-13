@@ -1,5 +1,5 @@
 
-SERVICE_DIR := ${HOME}/.config/systemd/
+SERVICE_DIR := ${HOME}/.config/systemd/user/
 SCRIPT_DIR := ${HOME}/Programme/scripts/
 
 
