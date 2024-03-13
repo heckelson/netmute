@@ -7,6 +7,7 @@ install:
 	cp ./mute-on-network.service ${SERVICE_DIR}
 	mkdir -p ${HOME}/Programme/scripts/
 	cp netmute.py ${SCRIPT_DIR}
+	systemctl --user daemon-reload
 	
 
 enable:
