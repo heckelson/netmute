@@ -1,0 +1,8 @@
+[Unit]
+Description=Mute Audio on certain networks
+
+[Service]
+ExecStart=%h/Programme/scripts/netmute.py
+
+[Install]
+WantedBy=network.target
